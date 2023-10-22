@@ -55,13 +55,13 @@ def main(classpath, main_class, file_path):
 if __name__ == "__main__":
     # Define the classpath, including the path to the external JARs and your classes.
     # For example: "/path/to/javaparser-core-X.XX.X.jar:/path/to/compiled_classes"
-    classpath = r"/home/andre/Downloads/javaparser-core-3.25.5.jar:/home/andre/Workspace/Albis_workflow/searchin_with_java/searchin_with_java/src"
+    classpath = r"/path_to_your_jarfile:/path_to_the_class_where_compiled_java_class_is"
 
     # Define the main class you want to execute
     main_class = "JavaParserExample"  # replace with your actual main class name
 
     # Define the path to the Java file you want to process
-    file_path = r"/home/andre/Workspace/Albis Workflow/WfJavaServer (copy)/source/com/albis/hitec/workflow/server/WorkflowDruckeVUnterlagen.java"  # Replace with your file path
+    file_path = r"file_path_to_the_java_file_you_want_to_analyse"  # Replace with your file path
 
     main(classpath, main_class, file_path)
 
