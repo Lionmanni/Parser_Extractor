@@ -54,14 +54,11 @@ def main(classpath, main_class, file_path):
 
 if __name__ == "__main__":
     # Define the classpath, including the path to the external JARs and your classes.
-    # For example: "/path/to/javaparser-core-X.XX.X.jar:/path/to/compiled_classes"
-    classpath = r"/path_to_your_jarfile:/path_to_the_class_where_compiled_java_class_is"
+    classpath = "C:\\Users\\Andre Mannweiler\\Desktop\\Lion_Arbeit\\Roman_Albis\\Parser_Extractor-main\\searchin_with_java\\javaparser-core-3.25.5.jar;C:\\Users\\Andre Mannweiler\\Desktop\\Lion_Arbeit\\Roman_Albis\\Parser_Extractor-main\\searchin_with_java\\src"
+
+    file_path = "C:\\Users\\Andre Mannweiler\\Downloads\\AbrechnungPanel.java"
 
     # Define the main class you want to execute
     main_class = "JavaParserExample"  # replace with your actual main class name
 
-    # Define the path to the Java file you want to process
-    file_path = r"file_path_to_the_java_file_you_want_to_analyse"  # Replace with your file path
-
     main(classpath, main_class, file_path)
-
