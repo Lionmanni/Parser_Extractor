@@ -9,6 +9,7 @@ public class ElementInfo {
     private int endLine;
     private Map<String, String> parameters; // new field for method parameters
 
+
     public ElementInfo(String name, String type, String returnType, int startLine, int endLine) {
         this.name = name;
         this.type = type;
