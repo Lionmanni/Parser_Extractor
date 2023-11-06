@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="github.javaparser.core" type="repository">
+  <library name="gson" type="repository">
     <properties maven-id="com.github.javaparser:javaparser-core:3.25.5" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/github/javaparser/javaparser-core/3.25.5/javaparser-core-3.25.5.jar!/" />

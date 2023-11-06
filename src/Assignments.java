@@ -1,4 +1,3 @@
-import com.github.javaparser.JavaParser;
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.expr.AssignExpr;
@@ -12,7 +11,7 @@ import java.util.Map;
 
 
 
-public class JavaParserAssignments {
+public class Assignments {
     public static void main(String [] args) throws IOException {
         if (args.length < 1) {
             System.out.println("Error: No file path provided.");

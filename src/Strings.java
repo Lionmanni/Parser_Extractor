@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class JavaParserStrings {
+public class Strings {
         public static void main(String[] args) throws IOException {
             if (args.length < 1) {
                 System.out.println("Error: No file path provided.");

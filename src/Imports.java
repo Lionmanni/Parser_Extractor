@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.io.IOException;
 
 
-public class JavaParserImports {
+public class Imports {
 
     public static void main(String[] args) throws IOException {
         if (args.length < 1) {

@@ -1,4 +1,3 @@
-import com.github.javaparser.JavaParser;
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.VariableDeclarator;
@@ -7,12 +6,11 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
 
-public class JavaParserVariables {
+public class Variables {
     public static void main(String[] args) throws IOException {
         if (args.length < 1) {
             System.out.println("Error: No file path provided.");

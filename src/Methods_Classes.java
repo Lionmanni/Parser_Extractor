@@ -5,11 +5,14 @@ import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.Parameter;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JavaParserExample {
+
+
+public class Methods_Classes {
 
     public static void main(String[] args) {
           if (args.length < 1) {
@@ -17,7 +20,7 @@ public class JavaParserExample {
               return;
           }
         String filePath = args[0];
-        File file = new File(filePath); // initializing the 'file' variable here
+        File file = new File("/home/andre/Workspace/Albis Workflow/WfJavaServer (copy)/source/com/albis/hitec/workflow/server/WorkflowDruckeVUnterlagen.java"); // initializing the 'file' variable here
 
 
 
@@ -53,6 +56,8 @@ public class JavaParserExample {
             // Print the information gathered
             for (ElementInfo element : elements) {
                 System.out.println(element);
+
+
                 // If ElementInfo class has a proper toString method, it will print meaningful information
             }
 
