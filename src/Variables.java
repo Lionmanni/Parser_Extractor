@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import java.util.ArrayList;
+import java.util.AbstractMap.SimpleEntry;
 
 
 public class Variables {
@@ -22,22 +24,31 @@ public class Variables {
 
         CompilationUnit cu = StaticJavaParser.parse(file);
 
-        Map<String, String> variableMap = new HashMap<>();
+        Map<String, object_def> variableMap = new HashMap<>();
         // Was ist ein Visitor
         VariableVisitor visitor = new VariableVisitor();
 
         visitor.visit(cu, variableMap);
 
-        for(Map.Entry<String, String> entry : variableMap.entrySet()) {
+        for(Map.Entry<String, object_def> entry : variableMap.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
     }
 
-    private static class VariableVisitor extends VoidVisitorAdapter<Map<String, String>> {
+    private static class VariableVisitor extends VoidVisitorAdapter<Map<String, object_def>> {
         @Override
-        public void visit(VariableDeclarator vd, Map<String, String> variableMap) {
-            variableMap.put(vd.getNameAsString(), vd.getTypeAsString());
-            super.visit(vd, variableMap);
+        public void visit(VariableDeclarator n, Map<String, object_def> variableMap) {
+            String varname = n.getNameAsString();
+            String vartype = n.getTypeAsString();
+
+            int startline = n.getBegin().map(pos -> pos.line).orElse(-1);
+            int endline = n.getEnd().map(pos -> pos.line).orElse(-1);
+
+            object_def customValue = variableMap.getOrDefault(varname, new object_def(vartype, new ArrayList<>()));
+            customValue.getPairList().add(new SimpleEntry<>(startline, endline));
+
+            variableMap.put(varname, customValue);
+            super.visit(n, variableMap);
         }
     }
 }

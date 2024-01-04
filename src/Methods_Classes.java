@@ -19,8 +19,8 @@ public class Methods_Classes {
               System.out.println("Error: No file path provided.");
               return;
           }
-        String filePath = args[0];
-        File file = new File("/home/andre/Workspace/Albis Workflow/WfJavaServer (copy)/source/com/albis/hitec/workflow/server/WorkflowDruckeVUnterlagen.java"); // initializing the 'file' variable here
+          String filePath = args[0];
+          File file = new File(filePath); // initializing the 'file' variable here
 
 
 
